@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Product Management</title>
+  <style>
+    #all{
+      border: 2px solid black;
+      padding: 0px;
+      margin: 3px;
+
+    }
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    
+
+    header {
+      background-color: #f2f2f2;
+      padding: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    #logo {
+      font-weight: bold;
+      font-size: 24px;
+    }
+
+    #logout {
+      text-decoration: none;
+      color: #000;
+    }
+
+    main {
+      margin: 20px;
+    }
+
+    .product-list, .vertical {
+      margin-bottom: 20px;
+    }
+
+    .table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    .table th, .table td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: center;
+    }
+
+    .table th {
+      background-color: #f2f2f2;
+    }      
+
+    .table tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+    #total-amount {
+    font-weight: bold;
+    color: red;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 8px;
+  }
+  #s{
+    text-align: right;
+  }
+  
+
+    .place-order {
+      text-align: right;
+    }
+   
+  </style>
+</head>
+<body>
+  <div id="all">
+  <header>
+    <div id="logo">Logo</div>
+    <h2>Welcome, Tina</h2>
+    <div id="logout"><a href="#">Logout</a></div>
+  </header>
+  
+  <main>
+    <div class="product-list">
+      <h2>Product List</h2>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Stack</th>
+            <th>Action</th>
+            
+          </tr>
+        </thead>
+        <tbody>
+          
+          <tr>
+            <td>Node.Js</td>
+            <td>9.99</td>
+            <td>8</td>
+            <td><img src="car.png" width="50" height="50"></td>
+          </tr>
+          <tr>
+            <td>React</td>
+            <td>19.99</td>
+            <td>5</td>
+            <td><img src="car.png" width="50" height="50"></td>
+          </tr>
+
+          <tr>
+            <td>Angular</td>
+            <td>29.99</td>
+            <td>13</td>
+            <td><img src="car.png" width="50" height="50"></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    
+    <div class="vertical">
+      <h2>Your Shopping cart</h2>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Total</th>
+            <th>Quantity</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Node.Js</td>
+            <td>9.99</td>
+            <td>8</td>
+            <td><button>-</button>
+              <button>0</button>
+              <button>+</button>
+            </td>
+          </tr>
+          <tr>
+            <td>Angular</td>
+            <td>290.99</td>
+            <td>13</td>
+            <td> <button>-</button>
+              <button>0</button>
+              <button>+</button></td>
+          </tr>
+          <tr>
+            <td colspan="4"><strong>Total Amount : 398</strong></td>
+            <td id="total-amount"></td>
+          </tr>
+         
+        </tbody>
+      </table>
+    </div>
+    
+    <div class="place-order">
+      <button>Place Order</button>
+    </div>
+  </main>
+  </div>
+</body>
+</html>
